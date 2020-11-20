@@ -11,6 +11,7 @@ client.on("message", message =>{
 
     var guild = message.guild;
     var roleSelected = message.content.slice(10,message.content.length);
+    console.log("test");
     
     if(message.content.startsWith(prefix + "giverole ")){
       
@@ -45,4 +46,4 @@ client.on("message", message =>{
 
 });
 
-client.login('NTA3MjI2NTYwMDkzMjI0OTYw.W9nViw.h6Hpd59-PCpoFeP5dM3F8C1kZ3c');
+client.login('token');
