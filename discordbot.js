@@ -1,3 +1,4 @@
+const token = require("./settings.json");
 const Discord = require('discord.js');
 const client = new Discord.Client();
 
