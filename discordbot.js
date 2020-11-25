@@ -12,7 +12,7 @@ client.on("message", message =>{
 
     var guild = message.guild;
     var roleSelected = message.content.slice(10,message.content.length);
-    console.log("test");
+    console.log("""Recieved and read the following message: " """ + message.content + """" """);
     
     if(message.content.startsWith(prefix + "giverole ")){
       
@@ -23,6 +23,7 @@ client.on("message", message =>{
             if(message.member.roles.cache.some(role => role.name === roleSelected)) {
 
                 message.reply(`You've already got the role bud.`);
+                console.log("User already had the role: " + roleSelected);
 
             }
 
@@ -32,6 +33,7 @@ client.on("message", message =>{
             
             let member = message.guild.member(message.author);
             message.guild.member(message.author).roles.add(role);
+            console.log("Added the role: " + roleSelected + " to User");
 
             }
 
