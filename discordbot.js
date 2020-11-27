@@ -44,7 +44,7 @@ client.on("message", message =>{
 
             message.reply("This either is not a role, or your spelling is off.");
             message.send("Try sending it again.");
-            message.send(" If I'm actually broken, message ǝɯɐuǝʞ#4166 ");
+            message.send(" If I'm actually broken, message me on discord. ");
             console.log(err);
 
         }
