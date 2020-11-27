@@ -12,7 +12,7 @@ client.on("message", message =>{
 
     var guild = message.guild;
     var roleSelected = message.content.slice(10,message.content.length);
-    console.log("""Recieved and read the following message: " """ + message.content + '" ');
+    console.log('Recieved and read the following message: " ' + message.content + '" ');
     
     if(message.content.startsWith(prefix + "giverole ")){
       
@@ -41,7 +41,7 @@ client.on("message", message =>{
 
         catch(err){
 
-            message.reply("I fucking broke dude. This either is not a role, your spelling is off or you're just retarded.");
+            message.reply("This either is not a role, your spelling is off or you're just retarded. (If I'm actually broken, message ǝɯɐuǝʞ#4166 )");
             console.log(err);
 
         }
