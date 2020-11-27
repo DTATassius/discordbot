@@ -41,8 +41,9 @@ client.on("message", message =>{
 
         catch(err){
 
-            message.reply("This either is not a role, your spelling is off or you're just retarded.");
-            message.send(" (If I'm actually broken, message ǝɯɐuǝʞ#4166) ")
+            message.reply("This either is not a role, or your spelling is off.");
+            message.send("Try sending it again.");
+            message.send(" If I'm actually broken, message ǝɯɐuǝʞ#4166 ");
             console.log(err);
 
         }
