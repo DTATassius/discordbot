@@ -12,7 +12,7 @@ client.on("message", message =>{
 
     var guild = message.guild;
     var roleSelected = message.content.slice(10,message.content.length);
-    console.log('Recieved and read the following message: ");
+    console.log('Recieved and read the following message: ');
     console.log(message.content);
     
     if(message.content.startsWith(prefix + "giverole ")){
