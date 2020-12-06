@@ -27,6 +27,10 @@ client.on("message", message =>{
                 console.log("User already had the role: " + roleSelected);
 
             }
+         
+            else if(message.member.roles.cache.some(role => role.name !== roleSelected)){
+                    message.reply("This isn't a role dumbass");
+            }
 
             else{
 
@@ -43,8 +47,8 @@ client.on("message", message =>{
         catch(err){
 
             message.reply("This either is not a role, or your spelling is off.");
-            message.send("Try sending it again.");
-            message.send(" If I'm actually broken, message me on discord. ");
+            message.reply("Try sending it again.");
+            message.reply("If I'm actually broken, message me on discord.");
             console.log(err);
 
         }
