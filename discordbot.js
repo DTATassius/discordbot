@@ -14,7 +14,28 @@ client.on("message", message =>{
     var roleSelected = message.content.slice(10,message.content.length);
     console.log('Recieved and read the following message: ');
     console.log(message.content);
-    
+ 
+    if(message.content.toLowerCase() === "stupid bot"){
+     message.reply("You're stupid, lol.");
+    }
+    else if (message.content.toLowerCase() === "the bots broken"){
+     message.reply("I'm not broken.");
+    }
+    else if (message.content.toLowerCase() === "the bot's broken"){
+     message.reply("I'm not broken.");
+    }
+    else if (message.content.toLowerCase() === "the bot is broken"){
+     message.reply("I'm not broken.");
+    }
+    else if (message.content.toLowerCase() === "bots broken"){
+     message.reply("I'm not broken.");
+    }
+    else if (message.content.toLowerCase() === "bot broken"){
+     message.reply("I'm not broken.");
+    }
+    else if (message.content.toLowerCase() === "bot is broken"){
+     message.reply("I'm not broken.");
+    }
     if(message.content.startsWith(prefix + "giverole ")){
       
         try{
@@ -29,7 +50,7 @@ client.on("message", message =>{
             }
          
             else if(message.member.roles.cache.some(role => role.name !== roleSelected)){
-                    message.reply("This isn't a role dumbass");
+                    message.reply("This isn't a role, dumbass.");
             }
 
             else{
