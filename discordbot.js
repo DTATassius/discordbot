@@ -15,9 +15,13 @@ client.on("message", message =>{
     console.log('Recieved and read the following message: ');
     console.log(message.content);
  
-    if(message.content.toLowerCase().includes("bot","broken") || message.content.toLowerCase().includes("bots","broken") || message.content.toLowerCase().includes("bot","stupid") || message.content.toLowerCase().includes("bots","stupid")){
-     message.reply("You're stupid, lol.");
+    if(message.content.toLowerCase().includes("bot" || "bots") && message.content.toLowerCase().includes("broken")){
+     message.reply("I am _really_ broken though?");
      console.log("someone dissed my bot");
+    }
+    else if(message.content.toLowerCase().includes("bot" || "bots") && message.content.toLowerCase().includes("stupid")){
+     message.reply("I'm not _that_ stupid you know.");
+     console.log("The bot is actually stupid though");
     }
     
     if(message.content.startsWith(prefix + "giverole ")){
