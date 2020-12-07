@@ -1,2 +1,8 @@
 # discordbot
-itdoesstuff
+
+
+
+
+
+
+Just kill me please
