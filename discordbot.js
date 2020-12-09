@@ -25,7 +25,7 @@ client.on("message", message =>{
     }
     
     if(message.content.startsWith(prefix + "giverole ")){
-        message.reply(message.guild.roles.cache.has(role => role.name === roleSelected));
+        message.reply(message.guild.roles.cache.has(role.name === roleSelected));
       
         try{
 
