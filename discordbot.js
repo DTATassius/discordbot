@@ -58,7 +58,7 @@ client.on("message", message =>{
 
         }
         message.reply("bot work");
-        message.reply(message.member.guild.roles.cache.has(role => role.name === roleSelected));
+        message.reply(message.member.guild.roles.cache.get(role => role.name === roleSelected));
         message.reply("bot still work");
     }
 
