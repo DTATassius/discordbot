@@ -29,9 +29,6 @@ client.on("message", message =>{
         try{
 
             const role = message.guild.roles.cache.find(role => role.name === roleSelected);
-         
-            
-            message.reply(message.guild.roles.cache.has(778324162829090816));
        
             if(message.member.roles.cache.some(role => role.name === roleSelected)) {
 
@@ -39,17 +36,13 @@ client.on("message", message =>{
                 console.log("User already had the role: " + roleSelected);
 
             }
-         
-            else if(message.guild.roles.cache.has(role => role.name === roleSelected)){
-                    message.reply("This isn't a role, dumbass.");
-            }
 
             else{
 
-            message.reply("Added the role!");
             
             let member = message.guild.member(message.author);
             message.guild.member(message.author).roles.add(role);
+            message.reply("Added the role!");
             console.log("Added the role: " + roleSelected + " to User");
 
             }
@@ -61,7 +54,6 @@ client.on("message", message =>{
             message.reply("This either is not a role, or your spelling is off.");
             message.reply("Try sending it again.");
             message.reply("If I'm actually broken, message me on discord.");
-            message.reply(err);
             console.log(err);
 
         }
