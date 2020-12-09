@@ -57,9 +57,9 @@ client.on("message", message =>{
             console.log(err);
 
         }
-        message.reply("bot work");
+        message.reply("2bot work2");
         message.reply(message.member.guild.roles.cache.get(role => role.name === roleSelected));
-        message.reply("bot still work");
+        message.reply("2bot still work2");
     }
 
 });
