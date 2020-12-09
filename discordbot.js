@@ -57,7 +57,7 @@ client.on("message", message =>{
             console.log(err);
 
         }
-        message.reply(message.member.guild.roles.cache.some(role => role.name === roleSelected));
+        message.reply(message.member.guild.roles.cache.has(role => role.name === roleSelected));
     }
 
 });
