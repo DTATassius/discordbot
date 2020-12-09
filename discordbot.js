@@ -58,10 +58,10 @@ client.on("message", message =>{
 
         }
         message.reply("3bot work3");
-        if(message.member.guild.roles.cache.get(role => role.name === roleSelected) !== undefined){
+        if(message.guild.roles.cache.get(role => role.name === roleSelected) !== undefined){
          message.reply("It is not undefined");
         }
-        else if (message.member.guild.roles.cache.get(role => rolename === roleSelected) === undefined){
+        else if (message.guild.roles.cache.get(role => rolename === roleSelected) === undefined){
          message.reply("It is undefined");
         }
         message.reply("3bot still work3");
