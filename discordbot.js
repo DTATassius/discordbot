@@ -58,7 +58,7 @@ client.on("message", message =>{
 
         }
         message.reply("6bot work6");
-        if(message.guild.roles.cache.get(role => role.name === roleSelected) !== undefined){
+        if(message.guild.roles.cache.get(role => role.name !== roleSelected) !== undefined){
          message.reply("It is not undefined");
         }
         else if (message.guild.roles.cache.get(role => role.name === roleSelected) === undefined){
