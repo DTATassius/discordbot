@@ -25,14 +25,12 @@ client.on("message", message =>{
     }
     
     if(message.content.startsWith(prefix + "giverole ")){
-        message.reply("test");
       
         try{
 
             const role = message.guild.roles.cache.find(role => role.name === roleSelected);
          
             
-            message.reply("test2");
             message.reply(message.guild.roles.cache.has(role.name === roleSelected));
        
             if(message.member.roles.cache.some(role => role.name === roleSelected)) {
