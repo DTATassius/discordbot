@@ -31,7 +31,7 @@ client.on("message", message =>{
             const role = message.guild.roles.cache.find(role => role.name === roleSelected);
          
             
-            message.reply(message.guild.roles.cache.has(role.name === roleSelected));
+            message.reply(message.guild.roles.cache.has(role => role.name === roleSelected));
        
             if(message.member.roles.cache.some(role => role.name === roleSelected)) {
 
