@@ -58,7 +58,12 @@ client.on("message", message =>{
 
         }
         message.reply("2bot work2");
-        message.reply(message.member.guild.roles.cache.get(role => role.name === roleSelected));
+        if(message.member.guild.roles.cache.get(role => role.name === roleSelected) !== undefined){
+         message.reply("It is not undefined");
+        }
+        else if (message.member.guild.roles.cache.get(role => rolename === roleSelected) === undefined){
+         message.reply("It is undefined");
+        }
         message.reply("2bot still work2");
     }
 
