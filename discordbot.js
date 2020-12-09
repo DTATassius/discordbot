@@ -57,14 +57,17 @@ client.on("message", message =>{
             console.log(err);
 
         }
-        message.reply("4bot work4");
+        message.reply("5bot work5");
         if(message.guild.roles.cache.get(role => role.name === roleSelected) !== undefined){
          message.reply("It is not undefined");
         }
-        else if (message.guild.roles.cache.get(role => rolename === roleSelected) === undefined){
+        else if (message.guild.roles.cache.get(role => rolename !== roleSelected) === undefined){
          message.reply("It is undefined");
         }
-        message.reply("4bot still work4");
+        else{
+          message.reply("It is neither defined or undefined");
+        }
+        message.reply("5bot still work5");
     }
 
 });
