@@ -56,17 +56,47 @@ client.on("message", message =>{
             message.reply("Try sending it again.");
             message.reply("If I'm actually broken, message me on discord."); /* Someone didn't fix the bot and the person messed up in typing the role */
             console.log(err);
+            console.log("Bot couldn't assign role.")
 
         }
-        if(message.guild.roles.cache.get(role => role.name !== roleSelected) !== undefined){
-         message.reply("It is not undefined");
+     
+     if(message.content.startswith(prefix + "removeRole ")){
+     
+         try{
+
+            const role = message.guild.roles.cache.find(role => role.name === roleSelected); /* Looks for the role that was requested */
+       
+            if(!message.member.roles.cache.some(role => role.name === roleSelected)) {
+
+                message.reply(`You don't have the role bud.`);
+                console.log("User doesn't have the role: " + roleSelected); /* User doesn't have the role */
+
+            }
+
+            else{
+
+            
+            let member = message.guild.member(message.author);
+            message.guild.member(message.author).roles.remove(role);
+            message.reply("Removed the role!");
+            console.log("Removed the role: " + roleSelected + " from User"); /* Removes the role from the user */
+
+            }
+
+            }
+
+        catch(err){
+
+            message.reply("This either is not a role, or your spelling is off.");
+            message.reply("Try sending it again.");
+            message.reply("If I'm actually broken, message me on discord."); /* Someone didn't fix the bot and the person messed up in typing the role */
+            console.log(err);
+            console.log("Bot couldn't remove role.")
+
         }
-        else if (message.guild.roles.cache.get(role => role.name === roleSelected) === undefined){
-         message.reply("It is undefined");
-        }
-        else{
-          message.reply("It is neither defined or undefined"); /* ***BOT IS STILL IN PROGRESS*** */
-        }
+     
+     }
+     
     }
 
 });
