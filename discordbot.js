@@ -1,5 +1,6 @@
 const token = require("./settings.json");
 const Discord = require('discord.js');
+fs = require("fs");
 const client = new Discord.Client(); /* Adding files */
 
 var prefix = "$" /* Prefix for the bot */
@@ -14,7 +15,7 @@ client.on("message", message =>{
     var roleSelected = message.content.slice(10,message.content.length); 
     console.log('Recieved and read the following message: ');
     console.log(message.content); /* Cuts and logs the message that was written */
-    writeFile("Sever_Logs.txt", message.content, console.log("Failed to write text")); /* Test code for logging messages sent to guilds */
+    fs.writeFile("Sever_Logs.txt", message.content, console.log("Failed to write text")); /* Test code for logging messages sent to guilds */
  
     if(message.content.toLowerCase().includes("bot" || "bots") && message.content.toLowerCase().includes("broken")){
      message.reply("I am _not_ broken");
