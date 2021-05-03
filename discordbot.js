@@ -97,4 +97,4 @@ client.login(token.token); /* Logs the bot into Discord */
 
 
 
-/* Ask Ryan for assistance? */
+/* Help me */
