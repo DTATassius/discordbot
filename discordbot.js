@@ -70,6 +70,13 @@ client.on("message", message =>{
 
         }
      
+     
+     if(message.content.startsWith("$removerole test")){
+     
+     message.reply("whattheheck");
+     
+     }
+     
      if(message.content.startsWith(prefix + "removerole")){
       
      
@@ -112,7 +119,7 @@ client.on("message", message =>{
             message.reply("Try sending it again.");
             message.reply("If I'm actually broken, message me on discord."); /* Someone didn't fix the bot and the person messed up in typing the role */
             console.log(err);
-            console.log("Bot couldn't remove role.")
+            console.log("Bot couldn't remove role.");
 
         }
      
