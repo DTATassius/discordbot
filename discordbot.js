@@ -70,13 +70,6 @@ client.on("message", message =>{
 
         }
      
-     
-     if(message.content.startsWith("$removerole test")){
-     
-     message.reply("whattheheck");
-     
-     }
-     
      if(message.content.startsWith(prefix + "removerole")){
       
      
@@ -123,7 +116,7 @@ client.on("message", message =>{
 
         }
      
-     }
+     
      
     }
 
