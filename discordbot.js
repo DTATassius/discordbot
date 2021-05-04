@@ -15,7 +15,16 @@ client.on("message", message =>{
     var roleSelected = message.content.slice(10,message.content.length); 
     console.log('Recieved and read the following message: ');
     console.log(message.content); /* Cuts and logs the message that was written */
-    fs.writeFile("Sever_Logs.txt", message.content); /* Test code for logging messages sent to guilds */
+    var data = message.content;
+ 
+    fs.writeFile("Server_Log.txt", data, (err) => {
+  if (err)
+    console.log(err);
+  else {
+    console.log("File written successfully\n");
+    console.log("The written has the following contents:", data);
+  }
+}); /* Test code for logging messages sent to guilds */
  
     if(message.content.toLowerCase().includes("bot" || "bots") && message.content.toLowerCase().includes("broken")){
      message.reply("I am _not_ broken");
