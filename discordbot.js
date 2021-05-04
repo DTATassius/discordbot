@@ -1,6 +1,6 @@
 const token = require("./settings.json");
 const Discord = require('discord.js');
-fs = require("fs");
+const fs = require("fs");
 const client = new Discord.Client(); /* Adding files */
 
 var prefix = "$" /* Prefix for the bot */
@@ -8,7 +8,7 @@ var prefix = "$" /* Prefix for the bot */
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`);
  });
-
+1
 client.on("message", message =>{
 
     var guild = message.guild;
