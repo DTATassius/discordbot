@@ -75,8 +75,13 @@ client.on("message", message =>{
          try{
 
             const role = message.guild.roles.cache.find(role => role.name === roleSelected); /* Looks for the role that was requested */
-       
+            
+            message.reply("Got before if statement")
+          
             if(message.member.roles.cache.some(role => role.name === roleSelected)) {
+             
+             
+                message.reply("Inside if statement")
 
                 message.reply(`You don't have the role bud.`);
                 console.log("User doesn't have the role: " + roleSelected); /* User doesn't have the role */
@@ -84,6 +89,10 @@ client.on("message", message =>{
             }
 
             else{
+             
+             
+             
+            message.reply("Past if statement and into else statement")
 
             
             message.guild.member(message.author).roles.remove(role);
@@ -95,6 +104,8 @@ client.on("message", message =>{
             }
 
         catch(err){
+         
+         
 
             message.reply("This either is not a role, or your spelling is off.");
             message.reply("Try sending it again.");
