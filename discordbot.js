@@ -52,7 +52,6 @@ client.on("message", message =>{
             else{
 
             
-            let member = message.guild.member(message.author);
             message.guild.member(message.author).roles.add(role);
             message.reply("Added the role!");
             console.log("Added the role: " + roleSelected + " to User"); /* Adds the role to the user */
@@ -87,7 +86,6 @@ client.on("message", message =>{
             else{
 
             
-            let member = message.guild.member(message.author);
             message.guild.member(message.author).roles.remove(role);
             message.reply("Removed the role!");
             console.log("Removed the role: " + roleSelected + " from User"); /* Removes the role from the user */
