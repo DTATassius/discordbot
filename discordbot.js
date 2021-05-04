@@ -70,7 +70,7 @@ client.on("message", message =>{
 
         }
      
-     if(message.content.startsWith(prefix + "removeRole ")){
+     if(message.content.startsWith(prefix + "removerole ")){
      
          try{
 
