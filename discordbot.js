@@ -81,7 +81,7 @@ client.on("message", message =>{
             
             message.reply("Got before if statement");
           
-            if(message.member.roles.cache.some(role => role.name === roleSelected)) {
+            if(!message.member.roles.cache.some(role => role.name === roleSelected)) {
              
              
                 message.reply("Inside if statement");
