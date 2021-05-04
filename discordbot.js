@@ -1,6 +1,6 @@
 const token = require("./settings.json");
 const Discord = require('discord.js');
-const fs = require("fs");
+const fs = require("fs.js");
 const client = new Discord.Client(); /* Adding files */
 
 var prefix = "$" /* Prefix for the bot */
