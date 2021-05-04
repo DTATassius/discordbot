@@ -71,7 +71,7 @@ client.on("message", message =>{
         }
     }
  
-    var roleSelected = message.content.slice(13,message.content.length); 
+    var roleSelected = message.content.slice(11,message.content.length); 
      if(message.content.startsWith(prefix + "removerole")){
       
      
