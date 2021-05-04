@@ -48,7 +48,7 @@ client.on("message", message =>{
                 console.log("User already had the role: " + roleSelected); /* User already has the role */
 
             }
-
+            
             else{
 
             
@@ -69,7 +69,7 @@ client.on("message", message =>{
             console.log("Bot couldn't assign role.")
 
         }
-     
+    }
      if(message.content.startsWith(prefix + "removerole")){
       
      
