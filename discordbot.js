@@ -16,7 +16,6 @@ client.on("message", message =>{
     console.log('Recieved and read the following message: ');
     console.log(message.content); /* Cuts and logs the message that was written */
     var data = message.content;
-    var msgUser = message.author
  
     fs.writeFile("Server_Log.txt", msgUser + ": " + data + "\n", (err) => {
   if (err)
@@ -71,12 +70,13 @@ client.on("message", message =>{
         }
      
      if(message.content.startsWith(prefix + "removerole ")){
+      
      
          try{
 
             const role = message.guild.roles.cache.find(role => role.name === roleSelected); /* Looks for the role that was requested */
        
-            if(!message.member.roles.cache.some(role => role.name === roleSelected)) {
+            if(message.member.roles.cache.some(role => role.name === roleSelected)) {
 
                 message.reply(`You don't have the role bud.`);
                 console.log("User doesn't have the role: " + roleSelected); /* User doesn't have the role */
