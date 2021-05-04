@@ -8,7 +8,7 @@ var prefix = "$" /* Prefix for the bot */
 client.on('ready', () => {
  console.log(`Logged in as ${client.user.tag}!`);
  });
-1
+
 client.on("message", message =>{
 
     var guild = message.guild;
