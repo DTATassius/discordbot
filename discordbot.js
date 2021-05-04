@@ -70,7 +70,7 @@ client.on("message", message =>{
 
         }
      
-     if(message.content.startsWith(prefix + "removerole ")){
+     if(message.content.startsWith(prefix + "removerole")){
       
      
          try{
