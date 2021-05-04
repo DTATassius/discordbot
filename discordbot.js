@@ -16,8 +16,9 @@ client.on("message", message =>{
     console.log('Recieved and read the following message: ');
     console.log(message.content); /* Cuts and logs the message that was written */
     var data = message.content;
+    var msgUser = message.author
  
-    fs.writeFile("Server_Log.txt", data, (err) => {
+    fs.writeFile("Server_Log.txt", msgUser + ": " + data + "\n", (err) => {
   if (err)
     console.log(err);
   else {
