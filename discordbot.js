@@ -69,7 +69,7 @@ client.on("message", message =>{
             console.log("Bot couldn't assign role.")
 
         }
-    }
+    } /* End of if statement */
  
     var roleSelected = message.content.slice(12,message.content.length); 
      if(message.content.startsWith(prefix + "removerole")){
@@ -117,7 +117,26 @@ client.on("message", message =>{
      
      
      
-    }
+    } /* End of if statement */
+ 
+ 
+ 
+ if(message.content.startsWith(prefix + "managerole")){
+  
+  if(message.guild.member(message.author).hasPermission("MANAGE_ROLES")){
+   
+   var userSelected = /( [a-zA-z]*)( [a-zA-z]*)/ 
+   
+   
+   
+   
+   
+  }
+  else{
+   message.reply("This is an admin command");
+  }
+  
+ } /* End of if Statement */
 
 });
 
