@@ -144,14 +144,14 @@ client.on("message", message =>{
   else{ /* If user does not have role it will attempt to add it */
    message.reply("User does not have the role.");
    user.role.add(role);
-   message.reply("Role added.")
-  }
-   
- else{ /* User who typed command does not have perms to manage roles */
-   message.reply("This is an admin command");
+   message.reply("Role added.");
   }
   
+  
  } /* End of if Statement */
+  else{ /* User who typed command does not have perms to manage roles */
+   message.reply("This is an admin command");
+  }
  }
  catch(err){
   message.reply("ERROR");
