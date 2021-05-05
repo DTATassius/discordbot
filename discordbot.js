@@ -18,7 +18,7 @@ client.on("message", message =>{
     var data = message.content;
     var msgUser = message.author;
  
-    fs.writeFile("Server_Log.txt", msgUser + ": " + data + "\n", (err) => {
+    fs.appendFile("Server_Log.txt", msgUser + ": " + data + "\n", (err) => {
   if (err)
     console.log(err);
   else {
