@@ -125,8 +125,9 @@ client.on("message", message =>{
   
   if(message.guild.member(message.author).hasPermission("MANAGE_ROLES")){
    
-   var userSelected = /( [a-zA-z]*)( [a-zA-z]*)/ 
+   var userSelected = /( [a-zA-z]*)( [a-zA-z]*)/;
    
+   message.reply("test");
    
    
    
