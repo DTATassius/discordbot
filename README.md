@@ -6,7 +6,7 @@ Bot currently has the ability to reply to certain messages and can lightly manag
 
 In the future the bot will be able to do more.
 IE:
-  Remove roles, 
+  ~Remove roles~, 
   Manage users remotely (For Admins that is), 
   Have reccomendation feature, 
   Not break every 2 seconds, 
