@@ -120,25 +120,43 @@ client.on("message", message =>{
     } /* End of if statement */
  
  
- 
- if(message.content.startsWith(prefix + "managerole")){
+ try{
+ if(message.content.startsWith(prefix + "manageaddrole")){ /* Checks for command */
   
-  if(message.guild.member(message.author).hasPermission("MANAGE_ROLES")){
+  if(message.guild.member(message.author).hasPermission("MANAGE_ROLES")){ /* Checks if user has perms */
    
-   var userSelected = /( [a-zA-z]*)( [a-zA-z]*)/;
+   var userSelected, roleSelected = /( [a-zA-z]*)( [a-zA-z]*)/; /* Looks for user selected and for role selected */
    
-   message.reply("test");
+   const user = client.users.cache.find(u => u.tag === userSelected).id; /* Finds user ID */
    
+   const role = message.guild.roles.cache.find(role => role.name === roleSelected); /* Looks for the role that was requested */
    
+   if(message.guild.member.cache.has.find(user)){ /* Looks for user in guild */
    
+   message.reply("User Found.");
+   console.log("Found User");
+   
+   if(message.member.roles.cache.some(role => role.name === roleSelected)) /* If user has role it will say it */
+    
+    message.reply("User has the role.");
    
   }
-  else{
+  else{ /* If user does not have role it will attempt to add it */
+   message.reply("User does not have the role.");
+   user.role.add(role);
+   message.reply("Role added.")
+  }
+   
+ else{ /* User who typed command does not have perms to manage roles */
    message.reply("This is an admin command");
   }
   
  } /* End of if Statement */
-
+ }
+ catch(err){
+  message.reply("ERROR")
+  console.log(err)
+ }
 });
 
 client.login(token.token); /* Logs the bot into Discord */
@@ -167,4 +185,6 @@ client.login(token.token); /* Logs the bot into Discord */
 
 
 
+ 
+ 
 /* Help me */
