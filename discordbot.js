@@ -154,8 +154,8 @@ client.on("message", message =>{
  } /* End of if Statement */
  }
  catch(err){
-  message.reply("ERROR")
-  console.log(err)
+  message.reply("ERROR");
+  console.log(err);
  }
 });
 
