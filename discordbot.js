@@ -135,12 +135,12 @@ client.on("message", message =>{
    
    message.reply("User Found.");
    console.log("Found User");
-   
-   if(message.member.roles.cache.some(role => role.name === roleSelected)) /* If user has role it will say it */
+   }
+   if(message.member.roles.cache.some(role => role.name === roleSelected)){ /* If user has role it will say it */
     
     message.reply("User has the role.");
    
-  }
+  } /* End of if statement */
   else{ /* If user does not have role it will attempt to add it */
    message.reply("User does not have the role.");
    user.role.add(role);
