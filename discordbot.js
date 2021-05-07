@@ -153,6 +153,7 @@ client.on("message", message =>{
    message.reply("This is an admin command");
   }
  }
+}
  catch(err){
   message.reply("ERROR");
   console.log(err);
