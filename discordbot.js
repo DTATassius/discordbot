@@ -135,7 +135,7 @@ client.on("message", message =>{
    
    message.reply("User Found.");
    console.log("Found User");
-   }
+   } /* End of if statement */
    if(message.member.roles.cache.some(role => role.name === roleSelected)){ /* If user has role it will say it */
     
     message.reply("User has the role.");
