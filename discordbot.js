@@ -121,9 +121,10 @@ client.on("message", message =>{
  
  
  try{
+  
  if(message.content.startsWith(prefix + "manageaddrole")){ /* Checks for command */
   
-  if(message.guild.member(message.author).hasPermission("MANAGE_ROLES")){ /* Checks if user has perms */
+ if(message.guild.member(message.author).hasPermission("MANAGE_ROLES")){ /* Checks if user has perms */
    
    var userSelected, roleSelected = /( [a-zA-z]*)( [a-zA-z]*)/; /* Looks for user selected and for role selected */
    
@@ -131,21 +132,25 @@ client.on("message", message =>{
    
    const role = message.guild.roles.cache.find(role => role.name === roleSelected); /* Looks for the role that was requested */
    
-   if(message.guild.member.cache.has.find(user)){ /* Looks for user in guild */
+    if(message.guild.member.cache.has.find(user)){ /* Looks for user in guild */
    
    message.reply("User Found.");
    console.log("Found User");
+  
    } /* End of if statement */
-   if(message.member.roles.cache.some(role => role.name === roleSelected)){ /* If user has role it will say it */
-    
-    message.reply("User has the role.");
-   
-  } /* End of if statement */
-  else{ /* If user does not have role it will attempt to add it */
+  
+    else{ /* If user does not have role it will attempt to add it */
    message.reply("User does not have the role.");
    user.role.add(role);
    message.reply("Role added.");
   }
+  
+   if(message.member.roles.cache.some(role => role.name === roleSelected)){ /* If user has role it will say it */
+    
+    message.reply("User has the role.");
+   
+   } /* End of if statement */
+
   
   
  } /* End of if Statement */
