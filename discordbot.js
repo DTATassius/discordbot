@@ -132,31 +132,29 @@ client.on("message", message =>{
    
    const role = message.guild.roles.cache.find(role => role.name === roleSelected); /* Looks for the role that was requested */
    
-    if(message.guild.member.cache.has.find(user)){ /* Looks for user in guild */
+   if(message.guild.member.cache.has.find(user)){ /* Looks for user in guild */
    
    message.reply("User Found.");
    console.log("Found User");
   
    } /* End of if statement */
   
-    else{ /* If user does not have role it will attempt to add it */
+    
+  
+   if(message.member.roles.cache.some(role => role.name === roleSelected)){ message.reply("User has the role."); } /* If user has role it will say it */
+    
+   
+   else{ /* If user does not have role it will attempt to add it */
    message.reply("User does not have the role.");
    user.role.add(role);
    message.reply("Role added.");
-  }
-  
-   if(message.member.roles.cache.some(role => role.name === roleSelected)){ /* If user has role it will say it */
-    
-    message.reply("User has the role.");
-   
-   } /* End of if statement */
-
+       }
   
   
  } /* End of if Statement */
-  else{ /* User who typed command does not have perms to manage roles */
-   message.reply("This is an admin command");
-  }
+  else{ /* User who typed command does not have perms to manage roles */ message.reply("This is an admin command") }
+  
+  
  }
 
 
