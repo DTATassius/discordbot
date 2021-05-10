@@ -152,6 +152,7 @@ client.on("message", message =>{
   
   
  } /* End of if Statement */
+ }
   else{ /* User who typed command does not have perms to manage roles */ message.reply("This is an admin command") }
   
   
