@@ -144,11 +144,11 @@ client.on("message", message =>{
    if(message.member.roles.cache.some(role => role.name === roleSelected)){ message.reply("User has the role."); } /* If user has role it will say it */
     
    
-   else{ /* If user does not have role it will attempt to add it */
+  /* else{ /* If user does not have role it will attempt to add it 
    message.reply("User does not have the role.");
    user.role.add(role);
    message.reply("Role added.");
-       }
+       }*/
   
   
  } /* End of if Statement */
