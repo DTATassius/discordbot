@@ -126,7 +126,9 @@ client.on("message", message =>{
   
  if(message.guild.member(message.author).hasPermission("MANAGE_ROLES")){ /* Checks if user has perms */
    
-   var userSelected, roleSelected = /( [a-zA-z]*)( [a-zA-z]*)/; /* Looks for user selected and for role selected */
+   var userSelected, roleSelected = /( @[a-zA-z]*)( [a-zA-z]*)/; /* Looks for user selected and for role selected */
+  
+  console.log(userSelected + " " + roleSelected);
    
    const user = client.users.cache.find(u => u.tag === userSelected).id; /* Finds user ID */
    
