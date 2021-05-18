@@ -126,7 +126,9 @@ client.on("message", message =>{
   
  if(message.guild.member(message.author).hasPermission("MANAGE_ROLES")){ /* Checks if user has perms */
    
-   var userSelected, roleSelected = /"( @[a-zA-z]*)( [a-zA-z]*)"/; /* Looks for user selected and for role selected */
+   var regx = /"( @[a-zA-z]*)( [a-zA-z]*)"/; /* Looks for user selected and for role selected */
+  
+  var userSelected, roleSelected = regx.test(message.content);
   
   console.log(userSelected + " " + roleSelected);
    
